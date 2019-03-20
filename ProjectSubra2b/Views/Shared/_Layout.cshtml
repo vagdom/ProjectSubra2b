@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.: Subra :.</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#myPage">Logo</a>
+            </div>
+            <div class="navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#myPage">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#coming">Coming Events</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Organize
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Overview </a></li>
+                            <li><a href="#">Pricing </a></li>
+                            <li><a href="#">Blog </a></li>
+                            <li><a href="#">Resources</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#myLogin" data-toggle="modal" data-target="#myLogin"><span class="glyphicon glyphicon-log-in"></span> Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Modal Sign In -->
+    <div class="modal fade" id="myLogin" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal LOGIN DIALOG content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Sign In</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="psw"><span class="glyphicon glyphicon-user"></span> Username</label>
+                            <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="usrname"><span class="glyphicon glyphicon-lock"></span> Password</label>
+                            <input type="text" class="form-control" id="password" placeholder="Enter password">
+                        </div>
+                        <button id="btnLogin" type="submit" class="btn btn-block">
+                            Login
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <p>Not <a id="msgNotRegistered" href="#">registered?</a></p>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnCancel" type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                    <p>Need <a id="msgHelp" href="#">help?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="container body-content"> -->
+    @RenderBody()
+    <!-- </div> -->
+    <!-- Footer -->
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <!--Column1-->
+                    <div class="footer-pad">
+                        <h5>Learn More</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#"></a></li>
+                            <li><a href="#">How It Works</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Mega Events</a></li>
+                            <li><a href="#">News and Updates</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <!--Column2-->
+                    <div class="footer-pad">
+                        <h5>Deal Seeker</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Events Near Me</a></li>
+                            <li><a href="#">Events by Category</a></li>
+                            <li><a href="#">Calendar</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <!--Column3-->
+                    <div class="footer-pad">
+                        <h5>Deal Maker</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Register</a></li>
+                            <li><a href="#">Facilities</a></li>
+                            <li><a href="#">Nonprofit</a></li>
+                            <li><a href="#">Sell Tickets</a></li>
+                            <li><a href="#">Staffing</a></li>
+                            <li><a href="#">Event Hardware</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <!--Column4-->
+                    <div class="footer-pad">
+                        <h5>Let's Connect</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#"><i class="fa fa-facebook-f" style="font-size:24px; color: #214cab;"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus" style="font-size:24px; color: #214cab;"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" style="font-size:24px; color: #214cab;"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin" style="font-size:24px; color: #214cab;"></i></li>
+                            <li><a href="#"><i class="fa fa-instagram" style="font-size:24px; color: #214cab;"></i></a></li>
+                            <li>
+                                <a href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            });
+
+            //Process Login Button
+            $('#btnLogin').click(function () {
+                alert('btnLogin');
+            });
+
+            //Process Cancel Button
+            $('#btnCancel').click(function () {
+                alert('btnCancel');
+            });
+
+            //Process Help Anchor Link
+            $('#msgHelp').click(function () {
+                alert('Help!');
+            });
+
+            //Process Not Registered Anchor Link
+            $('#msgNotRegistered').click(function () {
+                alert('Not Registered?');
+            });
+        })
+    </script>
+
+</body>
+</html>
